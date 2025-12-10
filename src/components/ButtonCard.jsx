@@ -1,7 +1,7 @@
-function ButtonCard({ text, onClick }) {
+function ButtonCard({ text, onClick, color }) {
   return (
     <button
-      className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
+      className={`px-6 py-3 text-white rounded-lg hover:brightness-90 transition ${color}`}
       onClick={onClick}
     >
       {text}
