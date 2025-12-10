@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import ButtonCard from "./components/ButtonCard";
 import DisplayArea from "./components/DisplayArea";
+import Footer from "./components/Footer";
 
 function App() {
   const [content, setContent] = useState("");
@@ -39,7 +40,6 @@ function App() {
       setContent(data.slip.advice);
     } catch (error) {
       console.log(error);
-
       setContent("Oops! Could not fetch advice.");
     }
     setLoading(false);
@@ -54,7 +54,6 @@ function App() {
       setContent(`${data.content} —${data.author}`);
     } catch (error) {
       console.log(error);
-
       setContent("Oops! Could not fetch a quote.");
     }
     setLoading(false);
@@ -142,6 +141,8 @@ function App() {
           ))}
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }
